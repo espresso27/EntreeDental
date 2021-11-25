@@ -1,0 +1,97 @@
+*
+{
+    box-sizing: border-box;
+    color: dimgray;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    background-color: white;
+}
+
+.container{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.container, form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: teal;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px;
+}
+
+label, button{
+    color: teal;
+}
+
+form{
+    border: 1px solid lightgrey;
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+input, button{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+button{
+    margin-top: 20px;
+    background-color: teal;
+    z-index: 1;
+    transition: ease-out 0.3s;
+    outline: none;
+    border: 2px solid rgb(4, 77, 77);
+    position: relative;
+    font-size: 1rem;
+}
+
+button:hover{
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+button::before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: rgb(4, 77, 77);
+}
+
+button:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+span{
+    color: whitesmoke;
+}
